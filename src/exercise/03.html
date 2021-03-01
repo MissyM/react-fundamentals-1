@@ -9,15 +9,16 @@
   <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
 
   <script type="text/babel">
+  const greeting = 'Sup'
+  const subject = 'world'
+  const children = `${greeting} ${subject}`
+  const className = 'container'
+  const props ={children, className}
 
-    const element = <div className= 'container'>Hello world mile</div>
-    const element = (
-      <div className="container">
-        <div className="message">Hello World</div>
-        <div className="message">Goodbye World</div>
-      </div>
-    )
+    const element = <div {...props}/>
+  
 
     ReactDOM.render(element, document.getElementById('root'))
   </script>
 </body>
+ 

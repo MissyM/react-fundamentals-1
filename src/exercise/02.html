@@ -1,31 +1,25 @@
 <!-- Intro to raw React APIs -->
 <!-- http://localhost:3000/isolated/exercise/02.html -->
-
+ 
 <body>
   <div id="root"></div>
-
-
   <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
 
   <script type="module">
-    /*
+  
+     const rootElement = document.getElementById('root')
+     const className = 'container'
+     const span1Element = React.createElement('span', {}, 'I am the fist span')
+     const span2Element = React.createElement('span', {}, 'I am the second span')
+     const element = React.createElement('div', {className}, 'hello', ' ', 'worlld', ' ',span1Element, ' ',span2Element)
+    /*Extracredit Nesting elements*/
 
-    */
-    const rootElement = document.getElementById('root')
 
-    const helloElement = React.createElement('span', {},'Hello')
-    const worldElement = React.createElement('span', {},'world')
-    const element = React.createElement( 
-      'div', 
-      {
-        className: 'container', 
-        
-    },
-    helloElement, 
-    ' ', 
-    worldElement)
-    console.log(element)
-    ReactDom.render(element, rootElement)
+     ReactDOM.render(element, rootElement)
+    
+    
+    
+
   </script>
 </body>
